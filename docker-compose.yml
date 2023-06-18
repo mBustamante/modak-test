@@ -1,0 +1,43 @@
+version: '3'
+services:
+  # postgres:
+  #   image: postgres:13.8
+  #   volumes:
+  #     - .data_db/postgres:/var/lib/postgresql
+  #   env_file:
+  #     - ./.env/.local
+  #   ports:
+  #     - "5432:5432"
+
+  redis:
+    image: redis:7.0.11-alpine
+    volumes:
+      - .data_db/redis:/data
+    command: redis-server --appendonly yes
+    restart: always
+    ports:
+      - "6379:6379"
+
+  backend:
+    image: modak/backend:lastest
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: >
+      bash -c "python manage.py migrate &&
+               python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./:/code
+    env_file:
+      - ./.env/.local
+    ports:
+      - "8000:8000"
+    restart: always
+    depends_on:
+      - redis
+    links:
+      - redis
+
+networks:
+  default:
+    name: modak-net

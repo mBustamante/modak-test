@@ -1,0 +1,9 @@
+Django<=4.2
+django-cors-headers
+django-health-check
+django-redis
+djangorestframework
+pip-tools
+pre-commit
+psycopg2-binary
+python-redis-lock[django]
