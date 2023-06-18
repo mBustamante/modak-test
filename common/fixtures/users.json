@@ -1,0 +1,38 @@
+[
+  {
+    "model": "auth.User",
+    "pk": 1,
+    "fields": {
+      "username": "admin@modak.pe",
+      "email": "admin@modak.pe",
+      "password": "pbkdf2_sha256$600000$KIhqA9FC2sRIuTQ5ItTUbQ$s5qyBUMExl0Gq6G+PPBEvs+AiSD+ISGMtxvvGmo/58A=",
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": true
+    }
+  },
+  {
+    "model": "auth.User",
+    "pk": 2,
+    "fields": {
+      "username": "user_test_1@modak.pe",
+      "email": "user_test_1@modak.pe"
+    }
+  },
+  {
+    "model": "auth.User",
+    "pk": 3,
+    "fields": {
+      "username": "user_test_2@modak.pe",
+      "email": "user_test_2@modak.pe"
+    }
+  },
+  {
+    "model": "auth.User",
+    "pk": 4,
+    "fields": {
+      "username": "user_test_3@modak.pe",
+      "email": "user_test_3@modak.pe"
+    }
+  }
+]

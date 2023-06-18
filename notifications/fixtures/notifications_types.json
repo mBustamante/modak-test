@@ -1,0 +1,38 @@
+[
+  {
+    "model": "notifications.NotificationType",
+    "pk": 1,
+    "fields": {
+      "name": "News",
+      "max_user_requests": 1,
+      "time_window": 86400,
+      "template_name": "news-template",
+      "created": "2023-06-18 00:00:00",
+      "modified": "2023-06-18 00:00:00"
+    }
+  },
+  {
+    "model": "notifications.NotificationType",
+    "pk": 2,
+    "fields": {
+      "name": "Marketing",
+      "max_user_requests": 3,
+      "time_window": 3600,
+      "template_name": "marketing-template",
+      "created": "2023-06-18 00:00:00",
+      "modified": "2023-06-18 00:00:00"
+    }
+  },
+  {
+    "model": "notifications.NotificationType",
+    "pk": 3,
+    "fields": {
+      "name": "Status",
+      "max_user_requests": 2,
+      "time_window": 60,
+      "template_name": "status-template",
+      "created": "2023-06-18 00:00:00",
+      "modified": "2023-06-18 00:00:00"
+    }
+  }
+]
